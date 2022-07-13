@@ -18,11 +18,11 @@
 
 ### O MODELO :chart_with_upwards_trend:
 
-O modelo é um modelo de classificação que da a predição de qual tipo de Iris temos de acordo com o tamanho e comprimento da petala e da sepala da flor, o modelo utilizado foi o [RandomForest](https://towardsdatascience.com/understanding-random-forest-58381e0602d2) que foi treinado no arquivo 'IrisTraining.py' e consumo no arquivo 'main.py' atráves do Pickle File 'randomforest.pkl', a predição é o output do método post do endpoint '/predict'
+O modelo é um modelo de classificação que da a predição de qual tipo de Iris temos de acordo com o tamanho e comprimento da petala e da sepala da flor, o modelo utilizado foi o [RandomForest](https://towardsdatascience.com/understanding-random-forest-58381e0602d2) que foi treinado no arquivo [IrisTraining.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/src/IrisTraining.py) e consumo no arquivo [main.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/main.py) atráves do Pickle File 'randomforest.pkl', a predição é o output do método POST do endpoint '/predict'
 
 ### A API :computer: 
 
-A API foi feita através do framework [Fast API](https://fastapi.tiangolo.com/), a API aceita requisições HTTP para o ip 35.175.141.255, a API apenas tem um método POST na porta 80 para o endpoint '/predict', então nossa url final é 'http://35.175.141.255:80/predict', esse metodo post recebe um json no seu body, esse json deve contem os seguintes chaves: 'sepal_length', 'sepal_width', 'petal_length', 'petal_width', todas recebendo seus devidos valores, isso será mostrado melhor quando fizermos o teste de chamar a API através do notebook.
+A API foi feita através do framework [Fast API](https://fastapi.tiangolo.com/), a API aceita requisições HTTP para o ip 35.175.141.255, a API apenas tem um método POST na porta 80 para o endpoint '/predict', então nossa url final é 'http://35.175.141.255:80/predict', esse metodo post recebe um json no seu body, esse json deve conter as seguintes chaves: 'sepal_length', 'sepal_width', 'petal_length', 'petal_width', todas recebendo seus devidos valores, esses valores são extraidos através do BaseModel no arquivo [IrisData.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/IrisData.py). A parte de como passar os valores no Body será mostrado melhor quando fizermos o teste de chamar a API através do notebook.
 
 
 ### O DEPLOY :whale:
