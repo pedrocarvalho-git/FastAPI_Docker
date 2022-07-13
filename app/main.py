@@ -27,7 +27,7 @@ def index() -> Dict:
 
          Returns instructions to the predict endpoint.
          """
-         return {'message': os.listdir("app")}
+         return {'message': 'O metodo get nao tem nenhuma informacao =c, va para o endpoint /predict e use o metodo post para ter a sua predicao'}
 
 @app.post('/predict')
 def predict_iris(data:IrisNewData) -> str:
@@ -42,6 +42,3 @@ def predict_iris(data:IrisNewData) -> str:
      prediction = str(prediction)
      prediction_str = prediction[2:-2]
      return { 'Prediction' :  prediction_str}
-
-#if __name__ == '__main__':
-#     uvicorn.run(app, host='127.0.0.1', port=8000)
