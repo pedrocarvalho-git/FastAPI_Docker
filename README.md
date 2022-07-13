@@ -1,13 +1,13 @@
 <h1 align="center">Desafio API PicPay :green_heart:</h1>
 
-<p align="center">Este é o projeto que consiste em uma API que contem um metodo POST que recebe os parametros do iris dataset, essa API retorna a predição através de um modelo de RandomForest</p>
+<p align="center">Este é o projeto que consiste em uma API que contémm um metodo POST que recebe os parâmetros do Iris dataset, essa API retorna a predição através de um modelo de RandomForest</p>
 
 ### OS ARQUIVOS :file_folder:
 
 * app
     - [IrisData.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/IrisData.py) -> _Arquivo que recebe os valores inputados no metodo POST da API_
     - [main.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/main.py) -> _Onde a mágica acontece, onde a API é criada, o metodo POST é definido e onde temos a predição do modelo_
-    - randomforest.pkl -> _Pickle File que contem o treino do nosso modelo_
+    - randomforest.pkl -> _Pickle File que contém o treino do nosso modelo_
 * notebook
     - [consumo_api.ipynb](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/notebook/consumo_api.ipynb) -> _Notebook que utilizaremos para consumir a API_
 * src
@@ -18,7 +18,7 @@
 
 ### O MODELO :chart_with_upwards_trend:
 
-O modelo é um modelo de classificação que da a predição de qual tipo de Iris temos de acordo com o tamanho e comprimento da pétala e da sépala da flor, o modelo utilizado foi o [RandomForest](https://towardsdatascience.com/understanding-random-forest-58381e0602d2) que foi treinado no arquivo [IrisTraining.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/src/IrisTraining.py) e consumo no arquivo [main.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/main.py) atráves do Pickle File 'randomforest.pkl', a predição é o output do método POST do endpoint '/predict'
+O modelo é um modelo de classificação que retorna a predição de qual tipo de Iris temos de acordo com o tamanho e comprimento da pétala e da sépala da flor, o modelo utilizado foi o [RandomForest](https://towardsdatascience.com/understanding-random-forest-58381e0602d2) que foi treinado no arquivo [IrisTraining.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/src/IrisTraining.py) e consumo no arquivo [main.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/main.py) atráves do Pickle File 'randomforest.pkl', a predição é o output do método POST do endpoint '/predict'
 
 ### A API :computer: 
 
