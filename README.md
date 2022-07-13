@@ -33,11 +33,11 @@ O Deploy deste desafio foi feito pelo [Docker](https://www.docker.com) atráves 
 
     1. Garantir esses pontos de rede na sua instancia.
         
-        ![Inbound Rules](https://i.imgur.com/YUisWqA.png)
+        ![Inbound Rules](https://i.imgur.com/qAqi1GN.png)
 
     2. Garantir que a sua instancia contem o git e o docker instalados.
 
-    3. Rodar os comandos abaixo 
+    3. Rodar os comandos abaixo no terminal da sua instancia. 
         ```
         git clone https://github.com/pedrocarvalho-git/deploy_modelo_fastapi.git
 
@@ -48,6 +48,8 @@ O Deploy deste desafio foi feito pelo [Docker](https://www.docker.com) atráves 
         docker run -t -i -p 80:80 mlapi:latest
         ```
 Para você fazer requisições à sua API você só ira precisar passar o IP ou o DNS da sua instancia com a porta 80 e o endpoint '/predict', para esse exemplo iremos utilizar a url: 'http://35.175.141.255:80/predict' ou 'http://ec2-35-175-141-255.compute-1.amazonaws.com:80/predict'
+
+Já para rodar localmente, os passos são os mesmos a única coisa que muda será que você irá usar o localhost ou invés do IP ou DNS da sua instancia, então a URL para a requisição ficaria: 'http://localhost:80/predict' 
 
 ### VERIFICANDO A FUNCIONALIDADE DA API :heavy_check_mark:
 
