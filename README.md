@@ -49,7 +49,7 @@ O Deploy deste desafio foi feito pelo [Docker](https://www.docker.com) atráves 
         ```
 Para você fazer requisições à sua API você só irá precisar passar o IP ou o DNS da sua instância com a porta 80 e o endpoint '/predict', para esse exemplo iremos utilizar a url: 'http://35.175.141.255:80/predict' ou 'http://ec2-35-175-141-255.compute-1.amazonaws.com:80/predict'
 
-Já para executar localmente, os passos são os mesmos a única coisa que muda será que você irá usar o localhost ou invés do IP ou DNS da sua instância, então a URL para a requisição ficaria: 'http://localhost:80/predict' 
+Já para executar localmente, os passos são os mesmos a única coisa que muda será que você irá usar o localhost ao invés do IP ou DNS da sua instância, então a URL para a requisição ficaria: 'http://localhost:80/predict' 
 
 ### VERIFICANDO A FUNCIONALIDADE DA API :heavy_check_mark:
 
