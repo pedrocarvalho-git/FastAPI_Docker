@@ -19,7 +19,7 @@ import pandas as pd
 app = FastAPI()
 rf=pickle.load(open("app/randomforest.pkl","rb"))
 
-# # 3. Index route, opens automatically on http://127.0.0.1:8000
+# # 3. Index route, opens automatically on http://0.0.0.0:80
 @app.get('/')
 def index() -> Dict:
          """
