@@ -16,8 +16,10 @@
 * Dockerfile -> _O Dockerfile que irá criar a nossa imagem docker da nossa API_
 * requirements.txt -> _A lista de pacotes que intalaremos na nossa imagem Docker_
 
-### O MODELO
+### O MODELO :chart_with_upwards_trend:
 
 O modelo é um modelo de classificação que da a predição de qual tipo de Iris temos de acordo com o tamanho e comprimento da petala e da sepala da flor, o modelo utilizado foi o RandomForest que foi treinado no arquivo 'IrisTraining.py' e consumo no arquivo 'main.py' atráves do Pickle File 'randomforest.pkl', a predição é o output do método post do endpoint '/predict'
 
-### 
+### A API :computer: 
+
+A API foi feita através do framework [Fast API](https://fastapi.tiangolo.com/)
