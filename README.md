@@ -14,7 +14,7 @@
     - [IrisTraining.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/src/IrisTraining.py) -> _Onde o nosso modelo foi treinado e a partir desse arquivo obtivemos o randomforest.pkl_
     - [iris.csv](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/src/iris.csv) -> _A nossa fonte de dados para treinarmos o nosso modelo_
 * [Dockerfile](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/Dockerfile) -> _O Dockerfile que irá criar a nossa imagem docker da nossa API_
-* [requirements.txt](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/requirements.txt) -> _A lista de pacotes que intalaremos na nossa imagem Docker_
+* [requirements.txt](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/requirements.txt) -> _A lista de pacotes que instalaremos na nossa imagem Docker_
 
 ### O MODELO :chart_with_upwards_trend:
 
