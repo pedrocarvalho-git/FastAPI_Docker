@@ -18,7 +18,7 @@
 
 ### O MODELO :chart_with_upwards_trend:
 
-O modelo é um modelo de classificação que da a predição de qual tipo de Iris temos de acordo com o tamanho e comprimento da petala e da sepala da flor, o modelo utilizado foi o [RandomForest](https://towardsdatascience.com/understanding-random-forest-58381e0602d2) que foi treinado no arquivo [IrisTraining.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/src/IrisTraining.py) e consumo no arquivo [main.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/main.py) atráves do Pickle File 'randomforest.pkl', a predição é o output do método POST do endpoint '/predict'
+O modelo é um modelo de classificação que da a predição de qual tipo de Iris temos de acordo com o tamanho e comprimento da pétala e da sépala da flor, o modelo utilizado foi o [RandomForest](https://towardsdatascience.com/understanding-random-forest-58381e0602d2) que foi treinado no arquivo [IrisTraining.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/src/IrisTraining.py) e consumo no arquivo [main.py](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/app/main.py) atráves do Pickle File 'randomforest.pkl', a predição é o output do método POST do endpoint '/predict'
 
 ### A API :computer: 
 
@@ -27,17 +27,17 @@ A API foi feita através do framework [Fast API](https://fastapi.tiangolo.com/),
 
 ### O DEPLOY :whale:
 
-O Deploy deste desafio foi feito pelo [Docker](https://www.docker.com) atráves de uma instancia [EC2](https://aws.amazon.com/pt/ec2/) da AWS, a imagem escolhida do Dockerfile é baseada na imagem do [Python3:9](https://hub.docker.com/_/python), fazemos a copia dos arquivos para o container e depois instalamos as dependencias do nosso 'main.py', após isso executamos a nossa API e abrimos ela para receber requisições através do [Uvicorn](https://www.uvicorn.org/), para assim ativarmos o nosso servidor web.
+O Deploy deste desafio foi feito pelo [Docker](https://www.docker.com) atráves de uma instância [EC2](https://aws.amazon.com/pt/ec2/) da AWS, a imagem escolhida do Dockerfile é baseada na imagem do [Python3:9](https://hub.docker.com/_/python), fazemos a cópia dos arquivos para o container e depois instalamos as dependências do nosso 'main.py', após isso executamos a nossa API e abrimos ela para receber requisições através do [Uvicorn](https://www.uvicorn.org/), para assim ativarmos o nosso servidor web.
 
-* Para iniciar esse esse Dockerfile em qualquer instancia você só precisa seguir esses passos:
+* Para iniciar esse esse Dockerfile em qualquer instância você só precisa seguir esses passos:
 
-    1. Garantir esses pontos de rede na sua instancia.
+    1. Garantir esses pontos de rede na sua instância.
         
         ![Inbound Rules](https://i.imgur.com/qAqi1GN.png)
 
-    2. Garantir que a sua instancia contem o git e o docker instalados.
+    2. Garantir que a sua instância contém o git e o docker instalados.
 
-    3. Rodar os comandos abaixo no terminal da sua instancia. 
+    3. Executar os comandos abaixo no terminal da sua instância. 
         ```
         git clone https://github.com/pedrocarvalho-git/deploy_modelo_fastapi.git
 
@@ -47,10 +47,10 @@ O Deploy deste desafio foi feito pelo [Docker](https://www.docker.com) atráves 
 
         docker run -t -i -p 80:80 mlapi:latest
         ```
-Para você fazer requisições à sua API você só ira precisar passar o IP ou o DNS da sua instancia com a porta 80 e o endpoint '/predict', para esse exemplo iremos utilizar a url: 'http://35.175.141.255:80/predict' ou 'http://ec2-35-175-141-255.compute-1.amazonaws.com:80/predict'
+Para você fazer requisições à sua API você só irá precisar passar o IP ou o DNS da sua instância com a porta 80 e o endpoint '/predict', para esse exemplo iremos utilizar a url: 'http://35.175.141.255:80/predict' ou 'http://ec2-35-175-141-255.compute-1.amazonaws.com:80/predict'
 
-Já para rodar localmente, os passos são os mesmos a única coisa que muda será que você irá usar o localhost ou invés do IP ou DNS da sua instancia, então a URL para a requisição ficaria: 'http://localhost:80/predict' 
+Já para executar localmente, os passos são os mesmos a única coisa que muda será que você irá usar o localhost ou invés do IP ou DNS da sua instância, então a URL para a requisição ficaria: 'http://localhost:80/predict' 
 
 ### VERIFICANDO A FUNCIONALIDADE DA API :heavy_check_mark:
 
-Como foi dito acima a API aceita requisições HTTP, então a partir disso podemos fazer a nossa requisição. Iremos seguir o notebook [consumo_api.ipynb](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/notebook/consumo_api.ipynb) que está na pasta notebook/, nele podemos mudar os valores referentes a petalas e sepalas, para ver qual seria o tipo de Iris para os valores que passamos.
+Como foi dito acima a API aceita requisições HTTP, então a partir disso podemos fazer a nossa requisição. Iremos seguir o notebook [consumo_api.ipynb](https://github.com/pedrocarvalho-git/deploy_modelo_fastapi/blob/main/notebook/consumo_api.ipynb) que está na pasta notebook/, nele podemos mudar os valores referentes a pétalas e sépalas, para ver qual seria o tipo de Iris para os valores que passamos.
