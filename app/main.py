@@ -30,11 +30,14 @@ def index() -> Dict:
          return {'message': 'O metodo get nao tem nenhuma informacao =c, va para o endpoint /predict e use o metodo post para ter a sua predicao'}
 
 @app.post('/predict')
-def predict_iris(data:IrisNewData) -> str:
+def predict_iris(data:IrisNewData) -> Dict:
      """
      Runs the prediction of the data that came from the IrisNewData class
      and returns that prediction
-
+      
+     Parameters:
+         data = takes the values from the IrisNewData class that came from the POST request
+        
      """
      data = data.dict()
      predict_df = pd.DataFrame(data, index=[0])
