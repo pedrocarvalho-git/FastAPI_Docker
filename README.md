@@ -39,7 +39,7 @@ O Deploy deste desafio foi feito pelo [Docker](https://www.docker.com) atráves 
 
     3. Executar os comandos abaixo no terminal da sua instância. 
         ```
-        git clone https://github.com/pedrocarvalho-git/deploy_modelo_fastapi.git
+        git clone https://github.com/pedrocarvalho-git/FastAPI-Docker.git
 
         cd deploy_modelo_fastapi
 
